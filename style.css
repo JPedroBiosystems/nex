@@ -57,6 +57,8 @@ display: flex;
   align-items: center;
   justify-content: center;
   background-color: #feee00;
+  -webkit-transition: all 1s; /* For Safari 3.1 to 6.0 */
+  transition: all 1s;
 
 }
 .wrapper {
@@ -87,12 +89,51 @@ display: flex;
 position: absolute;
   transform: rotate(0deg)
   -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
-  transition: all 0.2s;
+  transition: all 0.3s;
   width: 140px;
+  z-index: 2;
+  opacity: 1;
 }
+.logo2 {
+  position: absolute;
+    transform: rotate(0deg)
+    -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.3s;
+    width: 140px;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.3s;
+  }
+
+  #t1 {
+    z-index: 2;
+    opacity: 1;
+    -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.3s;
+  }
+  #t2 {
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.3s;
+  }
+  #w1 {
+    z-index: 2;
+    opacity: 1;
+        -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.3s;
+  }
+  #w2 {
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.3s;
+  }
 .menu {
   position: absolute;
   margin-top:85px;
+  margin-left:4px;
 	display: flex;
   align-items: center;
   -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
@@ -101,7 +142,8 @@ position: absolute;
   opacity: 0;
 }
 .telegram {
-opacity: 0;
+  position: absolute;
+
 padding: 10px;
   -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
   transition: width 0.3s;
@@ -109,9 +151,22 @@ width: 30px;
 
 
 }
+#v {
+  -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+  transition: all 0.3s;
+}
+.tele {
+  margin-top:-60px;
+  margin-left:-50px;
+}
+.whats {
+  margin-top:-60px;
+  margin-left:50px;
+}
 .whatsapp {
+  position: absolute;
   margin-right: -10px;
-opacity: 0;
+
 padding: 10px;
   -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
   transition: all 0.3s;
@@ -131,20 +186,22 @@ width: 30px;
 .container > .wrapper:hover > .menu {
 	opacity: 1;
 }
-.container > .wrapper:hover > .menu > a > .telegram {
- opacity: 1;
- margin-bottom: 0px;
-}
-.container > .wrapper:hover > .menu > a > .whatsapp {
- opacity: 1;
- margin-bottom: 0px;
-}
 
-.container > .wrapper > .menu > a > .telegram:hover {
+
+
+ .container > .wrapper > .menu > .tele >  a > #t1:hover + #t2 {
   width: 35px;
   margin-bottom: -5px;
  }
- .container > .wrapper > .menu > a > .whatsapp:hover {
+ .container > .wrapper > .menu > .whats > a > #w1:hover + #w2 {
+  width: 35px;
+  margin-bottom: -5px;
+ }
+ .container > .wrapper > .menu > .tele >  a > #t1:hover {
+  width: 35px;
+  margin-bottom: -5px;
+ }
+ .container > .wrapper > .menu > .whats > a > #w1:hover {
   width: 35px;
   margin-bottom: -5px;
  }
@@ -175,4 +232,8 @@ width: 30px;
     width: 35px;
     margin-bottom: 0px;
    }
+   .wrapper {
+    margin-top:-40px;
+  
+  }
 }

@@ -9,19 +9,54 @@
 <body>
 	
 	<div class="main">
-		<div class="container">	
+		<div class="container" id="background">	
 				
 			<div class="wrapper">			
-				<img src="NEX.png" class="logo">
+				<img src="NEX.png" id="logo" class="logo">
+				<img src="NEXw.png" id="logo2" class="logo2">
 				<div class="menu">
+					<div class="tele"> 
+					<a href="mailto:contato@falecomopug.com.br" target="_blank"><img src="telegram.png" class="telegram" id="t1"><img src="telegramw.png" class="telegram" id="t2"></a>
 					
-					<a href="mailto:contato@falecomopug.com.br" target="_blank"><img src="telegram.png" class="telegram"></a>
-					<a href="https://api.whatsapp.com/send?phone=5511943952530" target="_blank"><img src="whatsapp.png" class="whatsapp"></a>
-					
+				</div>
+				<div class="whats"> 
+					<a href="https://api.whatsapp.com/send?phone=5511943952530" target="_blank"><img src="whatsapp.png" class="whatsapp" id="w1"><img src="whatsappw.png" class="whatsapp" id="w2"></a>
+
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<span class="version">Versão: Beta 0.0.1</span>
+	<span class="version" id="v">Versão: Beta 0.0.1</span>
+	<script>
+	window.onload = function () {
+		var i = 0;
+function change() {
+  var doc = document.getElementById("background");
+  var doc2 = document.getElementById("logo");
+  var doc3 = document.getElementById("logo2");
+  var doc4 = document.getElementById("t1");
+  var doc5 = document.getElementById("t2");
+  var doc6 = document.getElementById("w1");
+  var doc7 = document.getElementById("w2");
+
+var doc8 = document.getElementById("v"); 
+ var color = ["#87868a", "#009bdb", "#d8d9dd", "#654690", "#ffffff", "#5b5a5d", "#feee00"];
+  var logo2 = ["0", "1", "0", "1", "0", "1", "0"];
+  var logo = ["1", "0", "1", "0", "1", "0", "1"];
+  var vcolor = ["#000000", "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#000000"];
+  doc.style.backgroundColor = color[i];
+  doc2.style.opacity = logo[i];
+  doc3.style.opacity = logo2[i];
+  doc4.style.opacity = logo[i];
+  doc5.style.opacity = logo2[i];
+  doc6.style.opacity = logo[i];
+  doc7.style.opacity = logo2[i];
+  doc8.style.color = vcolor[i];
+  i = (i + 1) % color.length;
+}
+setInterval(change, 15000);
+}
+	</script>
 </body>
 </html>
