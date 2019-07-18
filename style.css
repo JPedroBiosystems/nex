@@ -1,0 +1,178 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.main {
+	height: 100vh;
+width: 100%;
+}
+.container {
+	flex-flow: column;
+	height: 100%;
+display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #feee00;
+
+}
+.wrapper {
+  padding: 110px;
+  flex-flow: column;
+display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.version {
+  position:fixed;
+  bottom:0;
+  right:0;
+  font-family: 'Roboto Mono', monospace;
+  padding:3px;
+  font-size: 0.7em;
+}
+.logo_wrapper {
+  flex-flow: column;
+display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.logo {
+position: absolute;
+  transform: rotate(0deg)
+  -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+  transition: all 0.2s;
+  width: 140px;
+}
+.menu {
+  position: absolute;
+  margin-top:85px;
+	display: flex;
+  align-items: center;
+  -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+  transition: all 0.3s;
+  transition-property: opacity margin-bottom;
+  opacity: 0;
+}
+.telegram {
+opacity: 0;
+padding: 10px;
+  -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
+  transition: width 0.3s;
+width: 30px;
+
+
+}
+.whatsapp {
+  margin-right: -10px;
+opacity: 0;
+padding: 10px;
+  -webkit-transition: all 0.3s; /* For Safari 3.1 to 6.0 */
+  transition: all 0.3s;
+  transition-property: opacity margin-bottom;
+  transition-delay: 0.1s;
+
+width: 30px;
+}
+.container > .wrapper > .logo:hover {
+
+  
+}
+.container > .wrapper:hover > .logo {
+  
+}
+
+.container > .wrapper:hover > .menu {
+	opacity: 1;
+}
+.container > .wrapper:hover > .menu > a > .telegram {
+ opacity: 1;
+ margin-bottom: 0px;
+}
+.container > .wrapper:hover > .menu > a > .whatsapp {
+ opacity: 1;
+ margin-bottom: 0px;
+}
+
+.container > .wrapper > .menu > a > .telegram:hover {
+  width: 35px;
+  margin-bottom: -5px;
+ }
+ .container > .wrapper > .menu > a > .whatsapp:hover {
+  width: 35px;
+  margin-bottom: -5px;
+ }
+
+ @media (max-width: 900px) 
+{
+  .menu {
+
+    opacity: 1;
+  }
+  .telegram {
+  opacity: 1;
+
+  
+  
+  }
+  .whatsapp {
+
+  opacity: 1;
+
+
+  }
+  .container > .wrapper > .menu > a > .telegram:hover {
+    width: 35px;
+    margin-bottom: 0px;
+   }
+   .container > .wrapper > .menu > a > .whatsapp:hover {
+    width: 35px;
+    margin-bottom: 0px;
+   }
+}
